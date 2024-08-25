@@ -1,8 +1,9 @@
-
 const express = require('express');
+const cors = require('cors');  // Import the cors middleware
 const app = express();
 const port = 3001;
 
+app.use(cors());  // Use cors middleware
 app.use(express.json());
 
 app.get('/', (req, res) => {
